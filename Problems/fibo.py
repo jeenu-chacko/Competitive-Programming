@@ -1,7 +1,9 @@
 def getNthFib(n):
-    if n == 2:
-        return 1
-    elif n == 1:
-        return 0
-    else:
-        return getNthFib(n-1) + getNthFib (n-2)
+	fibArray=[0,1]
+	counter=3
+	while counter<=n:
+		nextFib=fibArray[0]+fibArray[1]
+		fibArray[0]=fibArray[1]
+		fibArray[1]= nextFib
+		counter+=1
+	return fibArray[1] if n>1 else fibArray[0]
