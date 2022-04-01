@@ -6,7 +6,6 @@ class Solution:
         hashMap = dict()
         
         def commonSub(n1,n2):
-            print(hashMap)
             if n1 < 0 or n2 < 0:
                 return 0
             key = (n1,n2)
